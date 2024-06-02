@@ -1,0 +1,31 @@
+const NFTs = []
+
+function mintNFT (_name, _skinColor, _dressType, _shoes) {
+const NFT = {
+"name": _name,
+"skinColor": _skinColor,
+"dressType": _dressType,
+"shoes": _shoes
+}
+ NFTs.push(NFT);
+console.log("Minted: " + _name);
+}
+    
+function listNFTs () {
+for(let i = 0; i < NFTs.length; i++) {
+console.log("\nID: \t\t" + (i + 1));
+console.log("Name: \t\t" + NFTs[i].name);
+console.log("skincolor: \t" + NFTs[i].skinColor);
+console.log("dress Type: " + NFTs[i].dressType);
+console.log("shoes \t\t" + NFTs[i].shoes);
+}
+}
+function getTotalSupply() {
+console.log("\n" + NFTs.length);
+}
+mintNFT("Ankit kumar", "Fair", "Ethnic wear", "leather shoes");
+mintNFT("Tarun Panwar", "Fair", "Ethnic wear", "leather shoes");
+mintNFT("Tushar Sharma", "Black", "Ethnic wear", "leather shoes");
+mintNFT("Abhay Vashishtha", "very fair", "Ethnic wear", "leather shoes");
+listNFTs();
+getTotalSupply();
